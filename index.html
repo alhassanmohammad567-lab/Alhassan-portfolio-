@@ -3,37 +3,13 @@
 <head>
     <title>Alhassan - Web Developer</title>
     <style>
-        <button id="themeBtn">🌙 Dark Mode</button>
-
-<style>
-    #themeBtn {
-        padding: 10px 20px;
-        background: #2d5016;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        margin: 10px;
-        font-size: 16px;
-    }
-    .dark-mode {
-        background: linear-gradient(to bottom, #1a1a1a, #000) !important;
-        color: white !important;
-    }
-</style>
-
-<script>
-    const btn = document.getElementById("themeBtn");
-    body.classList.toggle("dark-mode");
-    btn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
-</script>
         body {
             background: linear-gradient(to bottom, #e6f7ff, #ffffff);
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
             margin: 0;
+            transition: 0.3s;
         }
         h1 {
             color: #006400;
@@ -68,9 +44,31 @@
         .btn:hover {
             background-color: #004d00;
         }
+        #themeBtn {
+            padding: 10px 20px;
+            background: #2d5016;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .dark-mode {
+            background: linear-gradient(to bottom, #1a1a1a, #000) !important;
+            color: white !important;
+        }
+        .dark-mode h1, .dark-mode h2, .dark-mode p {
+            color: white !important;
+        }
+        .dark-mode div {
+            background: #2a2a2a !important;
+        }
     </style>
 </head>
 <body>
+    <button id="themeBtn">🌙 Dark Mode</button>
+    
     <h1>Hello, I am Alhassan</h1>
     <img src="https://i.ibb.co/vCSSbcjB/2063-E3-D4-78-C7-4966-99-DA-C2-C803746143.jpg" alt="Alhassan Photo">
     <p>Welcome to my first website. I am learning Web Development.</p>
@@ -114,5 +112,20 @@
     <a href="https://wa.me/233594395513" class="btn">WhatsApp Me</a>
 
     <p style="margin-top:50px; color:#888;">© 2026 Alhassan. Built from Zero to Pro.</p>
+
+<script>
+    const btn = document.getElementById("themeBtn");
+    const body = document.body;
+
+    btn.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+        
+        if(body.classList.contains("dark-mode")) {
+            btn.textContent = "☀️ Light Mode";
+        } else {
+            btn.textContent = "🌙 Dark Mode";
+        }
+    });
+</script>
 </body>
 </html>
