@@ -3,6 +3,31 @@
 <head>
     <title>Alhassan - Web Developer</title>
     <style>
+        <button id="themeBtn">🌙 Dark Mode</button>
+
+<style>
+    #themeBtn {
+        padding: 10px 20px;
+        background: #2d5016;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 16px;
+    }
+    .dark-mode {
+        background: linear-gradient(to bottom, #1a1a1a, #000) !important;
+        color: white !important;
+    }
+</style>
+
+<script>
+    const btn = document.getElementById("themeBtn");
+    body.classList.toggle("dark-mode");
+    btn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+});
+</script>
         body {
             background: linear-gradient(to bottom, #e6f7ff, #ffffff);
             font-family: Arial, sans-serif;
