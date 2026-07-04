@@ -23,15 +23,17 @@
             padding: 50px 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease;
         }
         header h1 {
             font-size: 50px;
             margin-bottom: 10px;
-            animation: fadeIn 1s;
+            animation: fadeIn 1.2s;
         }
         header p {
             font-size: 20px;
             opacity: 0.9;
+            animation: fadeIn 1.4s;
         }
         nav {
             background: #6B0000;
@@ -40,23 +42,38 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            animation: slideDown 0.8s ease;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-weight: bold;
             font-size: 16px;
             transition: 0.3s;
         }
         nav a:hover {
             color: #FFD700;
+            transform: scale(1.1);
+        }
+        .back-btn {
+            background: #FFD700;
+            color: #8B0000;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 900;
+            box-shadow: 0 4px 10px rgba(255,215,0,0.3);
+        }
+        .back-btn:hover {
+            background: white;
+            transform: scale(1.15);
         }
         h2 {
             color: #8B0000;
             font-size: 36px;
             text-align: center;
             margin: 50px 0 30px 0;
+            animation: fadeIn 1s;
         }
         .menu {
             display: flex;
@@ -73,11 +90,18 @@
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             padding: 25px;
-            transition: 0.4s;
+            transition: all 0.4s ease;
             text-align: center;
+            animation: fadeInUp 0.8s ease;
         }
+        .food-card:nth-child(1) { animation-delay: 0.1s; }
+        .food-card:nth-child(2) { animation-delay: 0.2s; }
+        .food-card:nth-child(3) { animation-delay: 0.3s; }
+        .food-card:nth-child(4) { animation-delay: 0.4s; }
+        .food-card:nth-child(5) { animation-delay: 0.5s; }
+        .food-card:nth-child(6) { animation-delay: 0.6s; }
         .food-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-12px) scale(1.03);
             box-shadow: 0 15px 35px rgba(139,0,0,0.2);
         }
         .food-card h3 {
@@ -109,11 +133,11 @@
             display: inline-block;
             margin: 8px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(139,0,0,0.3);
         }
         .btn:hover {
-            transform: scale(1.08);
+            transform: translateY(-3px) scale(1.08);
             box-shadow: 0 8px 25px rgba(139,0,0,0.4);
         }
         .btn-secondary {
@@ -121,15 +145,21 @@
             color: #8B0000;
             border: 2px solid #8B0000;
         }
+        .btn-secondary:hover {
+            background: #8B0000;
+            color: white;
+        }
         .about-section {
             background: #8B0000;
             color: white;
             padding: 60px 20px;
             text-align: center;
+            animation: fadeIn 1s;
         }
         .contact {
             padding: 50px 20px;
             text-align: center;
+            animation: fadeIn 1s;
         }
         .contact-info {
             font-size: 20px;
@@ -140,18 +170,32 @@
             color: white;
             padding: 30px;
             text-align: center;
+            animation: fadeIn 1s;
         }
 
+        /* ANIMATIONS */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
             header h1 { font-size: 36px; }
             h2 { font-size: 28px; }
             .food-card { width: 90%; }
-            nav a { margin: 0 10px; font-size: 14px; }
+            nav a { margin: 0 8px; font-size: 14px; }
         }
     </style>
 </head>
@@ -165,7 +209,7 @@
         <a href="#menu">Menu</a>
         <a href="#about">About</a>
         <a href="#contact">Order Now</a>
-        <a href="index.html">Back to Portfolio</a>
+        <a href="index.html" class="back-btn">← GO BACK TO PORTFOLIO</a>
     </nav>
 
     <section id="menu">
@@ -229,7 +273,7 @@
         <p class="contact-info">📞 Call: +233 59 439 5513</p>
         <p class="contact-info">⏰ Hours: 7:00 AM - 10:00 PM Daily</p>
         <a href="https://wa.me/233594395513" class="btn">WhatsApp to Order</a>
-        <a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
+        <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
     </section>
 
     <footer>
