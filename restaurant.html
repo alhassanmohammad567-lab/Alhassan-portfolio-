@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alhassan | Professional Web Developer | Ghana</title>
+    <title>Sefwi Taste Restaurant | Authentic Ghana Food</title>
     <style>
         * {
             margin: 0;
@@ -14,300 +14,227 @@
             scroll-behavior: smooth;
         }
         body {
-            background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
             font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(to bottom, #fff8f0, #ffffff);
+        }
+        header {
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            padding: 50px 20px;
             text-align: center;
-            margin: 0;
-            transition: 0.4s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            animation: fadeIn 1s;
+        }
+        header p {
+            font-size: 20px;
+            opacity: 0.9;
         }
         nav {
-            background: #006400;
-            padding: 18px;
+            background: #6B0000;
+            padding: 15px;
+            text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 18px;
+            margin: 0 20px;
             font-weight: bold;
             font-size: 16px;
             transition: 0.3s;
         }
         nav a:hover {
-            color: #90EE90;
-            transform: scale(1.1);
-        }
-        h1 {
-            color: #006400;
-            font-size: 45px;
-            margin: 30px 0 10px 0;
+            color: #FFD700;
         }
         h2 {
-            color: #006400;
-            margin: 40px 0 20px 0;
-            font-size: 32px;
+            color: #8B0000;
+            font-size: 36px;
+            text-align: center;
+            margin: 50px 0 30px 0;
         }
-        .subtitle {
-            color: #555;
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-        p {
-            color: #333;
-            font-size: 18px;
-            max-width: 750px;
-            margin: 10px auto;
-            line-height: 1.7;
-        }
-        img {
-            border-radius: 50%;
-            border: 6px solid #006400;
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            margin: 25px 0;
-            transition: 0.4s;
-            box-shadow: 0 5px 20px rgba(0,100,0,0.3);
-        }
-        img:hover {
-            transform: scale(1.08) rotate(2deg);
-            border-color: #90EE90;
-        }
-        .btn {
-            background: linear-gradient(135deg, #006400, #004d00);
-            color: white;
-            padding: 16px 35px;
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin: 12px;
-            transition: 0.3s;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0,100,0,0.3);
-        }
-        .btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,100,0,0.4);
-        }
-        .btn-secondary {
-            background: white;
-            color: #006400;
-            border: 2px solid #006400;
-        }
-        #themeBtn {
-            padding: 12px 22px;
-            background: #2d5016;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 200;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-        #themeBtn:hover {
-            transform: scale(1.1);
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            margin: 25px auto;
-            max-width: 550px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: 0.4s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-        .projects-grid {
+        .menu {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
+            gap: 30px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
-        .project-card {
+        .food-card {
             background: white;
-            width: 340px;
+            width: 350px;
             border-radius: 20px;
-            padding: 25px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            padding: 25px;
             transition: 0.4s;
-            text-align: left;
+            text-align: center;
         }
-        .project-card:hover {
+        .food-card:hover {
             transform: translateY(-12px);
+            box-shadow: 0 15px 35px rgba(139,0,0,0.2);
         }
-        .project-card h3 {
-            color: #006400;
-            font-size: 22px;
+        .food-card h3 {
+            color: #8B0000;
+            font-size: 24px;
             margin-bottom: 10px;
         }
-        .skill {
-            background: linear-gradient(135deg, #006400, #004d00);
-            color: white;
-            padding: 12px 22px;
-            border-radius: 30px;
-            margin: 10px;
-            display: inline-block;
-            transition: 0.3s;
-            font-weight: bold;
+        .food-card p {
+            color: #555;
             font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-        .skill:hover {
-            transform: scale(1.15);
-            box-shadow: 0 5px 15px rgba(0,100,0,0.3);
+        .price {
+            color: #8B0000;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .btn {
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(139,0,0,0.3);
+        }
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(139,0,0,0.4);
+        }
+        .btn-secondary {
+            background: white;
+            color: #8B0000;
+            border: 2px solid #8B0000;
+        }
+        .about-section {
+            background: #8B0000;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .contact-info {
+            font-size: 20px;
+            margin: 15px 0;
         }
         footer {
-            background: #006400;
+            background: #6B0000;
             color: white;
             padding: 30px;
-            margin-top: 60px;
-        }
-        .dark-mode {
-            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%) !important;
-            color: white !important;
-        }
-        .dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode .subtitle {
-            color: white !important;
-        }
-        .dark-mode .card, .dark-mode .project-card {
-            background: #2a2a2a !important;
-        }
-        .dark-mode .btn-secondary {
-            background: #333;
-            color: white;
-            border-color: white;
+            text-align: center;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        section {
-            animation: fadeInUp 0.8s ease-out;
-            padding: 40px 20px;
-        }
 
-        /* Mobile */
         @media (max-width: 768px) {
-            h1 { font-size: 32px; }
-            h2 { font-size: 26px; }
-            nav a { margin: 0 8px; font-size: 14px; }
-            #themeBtn { top: 10px; right: 10px; font-size: 14px; padding: 10px 16px; }
-            .btn { padding: 14px 25px; font-size: 16px; }
-            .project-card { width: 90%; }
+            header h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+            .food-card { width: 90%; }
+            nav a { margin: 0 10px; font-size: 14px; }
         }
     </style>
 </head>
 <body>
-    <button id="themeBtn">🌙 Dark Mode</button>
-    
+    <header>
+        <h1>Sefwi Taste Restaurant</h1>
+        <p>Authentic Ghanaian Food | Western North Region</p>
+    </header>
+
     <nav>
-        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Order Now</a>
+        <a href="index.html">Back to Portfolio</a>
     </nav>
 
-    <section id="home">
-        <h1>Alhassan Mohammad</h1>
-        <p class="subtitle">Professional Web Developer | Ghana 🇬🇭</p>
-        <img src="https://i.ibb.co/vCSSbcjB/2063-E3-D4-78-C7-4966-99-DA-C2-C803746143.jpg" alt="Alhassan Photo">
-        <p>I build modern, fast, and beautiful websites that help businesses grow online.</p>
-        <p>Based in Sefwi Asawinso, Western North Region, Ghana</p>
-        
-        <a href="https://github.com/alhassanmohammad567-lab" class="btn">View My GitHub</a>
-        <a href="#contact" class="btn btn-secondary">Hire Me</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="card">
-            <p>I am a passionate Web Developer from Ghana. I started from zero and built my way to pro through hard work and consistency.</p>
-            <p>I specialize in creating responsive websites with clean code, modern design, and great user experience.</p>
-            <p><b>My Goal:</b> Help Ghanaian businesses get online and reach more customers.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="card">
-            <span class="skill">HTML5</span>
-            <span class="skill">CSS3</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Responsive Design</span>
-            <span class="skill">GitHub</span>
-            <span class="skill">UI/UX Design</span>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>My professional portfolio with dark mode, animations, and mobile responsive design. Built with HTML, CSS & JavaScript.</p>
-                <a href="#" class="btn">You are here</a>
+    <section id="menu">
+        <h2>Our Delicious Menu</h2>
+        <div class="menu">
+            <div class="food-card">
+                <h3>Fufu & Light Soup</h3>
+                <p>Fresh pounded fufu served with rich chicken light soup and assorted meat. Made daily with local ingredients.</p>
+                <p class="price">GH₵ 35</p>
+                <a href="https://wa.me/233594395513?text=Hi, I want to order Fufu & Light Soup" class="btn">Order on WhatsApp</a>
             </div>
 
-            <div class="project-card">
-                <h3>Sefwi Taste Restaurant</h3>
-                <p>Modern restaurant website with menu, online ordering via WhatsApp, and beautiful design for local businesses.</p>
-                <a href="restaurant.html" class="btn">View Project</a>
+            <div class="food-card">
+                <h3>Jollof Rice & Grilled Chicken</h3>
+                <p>Spicy Ghana jollof rice with grilled chicken, plantain and salad. The taste of home!</p>
+                <p class="price">GH₵ 30</p>
+                <a href="https://wa.me/233594395513?text=Hi, I want to order Jollof Rice & Chicken" class="btn">Order on WhatsApp</a>
             </div>
 
-            <div class="project-card">
-                <h3>Business Landing Page</h3>
-                <p>High-converting landing page for businesses. Features call-to-action buttons, contact form, and lead generation.</p>
-                <a href="#" class="btn">Coming Soon</a>
+            <div class="food-card">
+                <h3>Banku & Grilled Tilapia</h3>
+                <p>Fresh banku with grilled tilapia, pepper sauce and onions. A true Ghanaian delicacy.</p>
+                <p class="price">GH₵ 40</p>
+                <a href="https://wa.me/233594395513?text=Hi, I want to order Banku & Tilapia" class="btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="food-card">
+                <h3>Waakye with Everything</h3>
+                <p>Rice and beans with spaghetti, gari, egg, fish, and shito. Full Ghana breakfast!</p>
+                <p class="price">GH₵ 25</p>
+                <a href="https://wa.me/233594395513?text=Hi, I want to order Waakye" class="btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="food-card">
+                <h3>Red Red</h3>
+                <p>Beans stew with fried plantain, fish and gari. Healthy and delicious!</p>
+                <p class="price">GH₵ 28</p>
+                <a href="https://wa.me/233594395513?text=Hi, I want to order Red" class="btn">Order on WhatsApp</a>
+            </div>
+
+            <div class="food-card">
+                <h3>Kenkey & Fried Fish</h3>
+                <p>Fermented corn dough with fried fish, pepper and onions. Classic Ghana meal.</p>
+                <p class="price">GH₵ 32</p>
+                <a href="https://wa.me/233594395513?text=Hi, I want to order Kenkey & Fish" class="btn">Order on WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Let's Work Together</h2>
-        <p>Need a website for your business? Let's talk!</p>
-        <div class="card">
-            <p style="font-size:18px; margin:8px 0;"><b>Email:</b></p>
-            <p style="font-size:20px; color:#006400; font-weight:bold;">alhassanmohammad744@gmail.com</p>
-            <p style="font-size:18px; margin:12px 0;"><b>WhatsApp:</b> +233 59 439 5513</p>
-            <a href="https://wa.me/233594395513" class="btn">WhatsApp Me</a>
-            <a href="mailto:alhassanmohammad744@gmail.com" class="btn btn-secondary">Send Email</a>
-        </div>
+    <section id="about" class="about-section">
+        <h2 style="color: white;">About Us</h2>
+        <p style="max-width: 700px; margin: 20px auto; font-size: 18px; line-height: 1.8;">
+            Welcome to Sefwi Taste Restaurant! We serve authentic Ghanaian dishes made with love and fresh ingredients from Western North Region. 
+            Our goal is to bring the taste of home to everyone. Open daily from 7am to 10pm.
+        </p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Order Now</h2>
+        <p class="contact-info">📍 Location: Sefwi Asawinso, Western North Region</p>
+        <p class="contact-info">📞 Call: +233 59 439 5513</p>
+        <p class="contact-info">⏰ Hours: 7:00 AM - 10:00 PM Daily</p>
+        <a href="https://wa.me/233594395513" class="btn">WhatsApp to Order</a>
+        <a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
     </section>
 
     <footer>
-        <p>© 2026 Alhassan Mohammad. Built from Zero to Pro with ❤️</p>
-        <p>Sefwi Asawinso, Western North Region, Ghana</p>
+        <p>© 2026 Sefwi Taste Restaurant. Built by Alhassan | Professional Web Developer</p>
+        <p>"Good Food, Good Life"</p>
     </footer>
-
-<script>
-    const btn = document.getElementById("themeBtn");
-    const body = document.body;
-
-    btn.addEventListener("click", function() {
-        body.classList.toggle("dark-mode");
-        btn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
-    });
-</script>
 </body>
 </html>
