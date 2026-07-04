@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alhassan | Web Developer</title>
+    <title>Alhassan | Web Developer in Ghana</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background: linear-gradient(to bottom, #e6f7ff, #ffffff);
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
             text-align: center;
             padding: 20px;
             margin: 0;
@@ -29,6 +23,7 @@
             z-index: 100;
             border-radius: 10px;
             margin-bottom: 30px;
+            animation: fadeIn 1s ease-in;
         }
         nav a {
             color: white;
@@ -38,63 +33,56 @@
             transition: 0.3s;
         }
         nav a:hover {
-            color: #90EE90;
+            color: #FFD700;
             transform: scale(1.1);
         }
-        h1 {
-            color: #006400;
-            font-size: 40px;
-            margin: 20px 0;
-        }
-        h2 {
-            color: #006400;
-            margin: 30px 0 15px 0;
-        }
-        p {
-            color: #333;
-            font-size: 18px;
-            max-width: 700px;
-            margin: 10px auto;
-            line-height: 1.6;
-        }
+        h1 { color: #006400; font-size: 45px; margin: 20px 0; animation: fadeIn 1s ease-in; }
+        h2 { color: #006400; margin: 30px 0 15px 0; font-size: 2.2em; }
+        p { color: #333; font-size: 18px; max-width: 700px; margin: 10px auto; line-height: 1.6; }
         img {
             border-radius: 50%;
             border: 5px solid #006400;
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
             margin: 20px 0;
             transition: 0.4s;
+            animation: fadeIn 1.2s ease-in;
         }
         img:hover {
-            transform: scale(1.08);
-            border-color: #004d00;
+            transform: scale(1.08) rotate(3deg);
+            border-color: #FFD700;
+            box-shadow: 0 0 25px rgba(0,100,0,0.4);
         }
         .btn {
             background-color: #006400;
             color: white;
-            padding: 15px 30px;
+            padding: 16px 32px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 18px;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
             margin: 10px;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             font-weight: bold;
         }
         .btn:hover {
             background-color: #004d00;
-            transform: scale(1.08);
-            box-shadow: 0 5px 15px rgba(0,100,0,0.3);
+            transform: translateY(-3px) scale(1.08);
+            box-shadow: 0 10px 20px rgba(0,100,0,0.4);
+        }
+        .btn-restaurant {
+            background: linear-gradient(135deg, #CE1126, #FFD700, #006B3D);
+            color: white;
         }
         #themeBtn {
-            padding: 10px 20px;
+            padding: 12px 22px;
             background: #2d5016;
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             margin: 10px;
             font-size: 16px;
@@ -104,35 +92,34 @@
             right: 20px;
             z-index: 200;
         }
-        #themeBtn:hover {
-            transform: scale(1.1);
-        }
         .card {
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
             margin: 20px auto;
-            max-width: 500px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: 0.3s;
+            max-width: 550px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            animation: fadeIn 0.8s ease-in;
         }
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
         .skill {
             background: #006400;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 25px;
             margin: 8px;
             display: inline-block;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             font-weight: bold;
         }
         .skill:hover {
-            transform: scale(1.15);
-            background: #004d00;
+            transform: scale(1.15) rotate(-2deg);
+            background: #FFD700;
+            color: #000;
         }
         footer {
             background: #006400;
@@ -140,38 +127,37 @@
             padding: 25px;
             margin-top: 50px;
             border-radius: 10px;
+            animation: fadeIn 1s ease-in;
         }
         .dark-mode {
             background: linear-gradient(to bottom, #1a1a1a, #000) !important;
             color: white !important;
         }
-        .dark-mode h1, .dark-mode h2, .dark-mode p {
-            color: white !important;
-        }
-        .dark-mode .card {
-            background: #2a2a2a !important;
-        }
+        .dark-mode h1, .dark-mode h2, .dark-mode p { color: white !important; }
+        .dark-mode .card { background: #2a2a2a !important; }
 
-        /* Fade in animation */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        section {
-            animation: fadeIn 0.8s ease-in;
+        section { animation: fadeIn 0.8s ease-in; }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        /* Mobile Responsive */
         @media (max-width: 600px) {
-            h1 { font-size: 28px; }
-            nav a { margin: 0 8px; font-size: 14px; }
-            #themeBtn { top: 10px; right: 10px; font-size: 14px; padding: 8px 15px; }
-            .btn { padding: 12px 20px; font-size: 16px; }
+            h1 { font-size: 32px; }
+            nav a { margin: 0 5px; font-size: 14px; }
+            #themeBtn { top: 10px; right: 10px; font-size: 14px; }
+            .project-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <button id="themeBtn">🌙 Dark Mode</button>
+    <button id="themeBtn">🌙 Dark</button>
     
     <nav>
         <a href="#home">Home</a>
@@ -182,26 +168,22 @@
     </nav>
 
     <section id="home">
-        <h1>Hello, I am Alhassan</h1>
+        <h1>ALHASSAN</h1>
         <img src="https://i.ibb.co/vCSSbcjB/2063-E3-D4-78-C7-4966-99-DA-C2-C803746143.jpg" alt="Alhassan Photo">
-        <p>Welcome to my first website. I am learning Web Development.</p>
-        <p>Moreover, I am just a beginner from zero to pro if God willing.</p>
-        <p>📍 I'm from Ghana western north region Sefwi Asawinso.</p>
+        <p><strong>Professional Web Developer</strong></p>
+        <p>I build modern, fast websites that bring you more customers</p>
+        <p>📍 Ghana Western North Region, Sefwi Asawinso 🇬🇭</p>
         
-        <a href="https://github.com/alhassanmohammad567-lab" class="btn">View My GitHub</a>
-        <a href="#contact" class="btn">Hire Me</a>
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="https://github.com/alhassanmohammad567-lab" class="btn">GitHub</a>
     </section>
-
-    <hr style="margin: 50px 0; border: 1px solid #ddd;">
 
     <section id="about">
         <h2>About Me</h2>
         <div class="card">
-            <p>I am a passionate Web Developer from Ghana. I started from zero and I am building my way to pro. I love learning new things and creating websites.</p>
+            <p>I am a passionate Web Developer from Ghana. I started from zero and I am building my way to pro. I love learning new things and creating beautiful, responsive websites that help people and businesses grow online.</p>
         </div>
     </section>
-
-    <hr style="margin: 50px 0; border: 1px solid #ddd;">
 
     <section id="skills">
         <h2>My Skills</h2>
@@ -211,49 +193,43 @@
             <span class="skill">JavaScript</span>
             <span class="skill">GitHub</span>
             <span class="skill">Responsive Design</span>
+            <span class="skill">Animations</span>
         </div>
     </section>
 
-    <hr style="margin: 50px 0; border: 1px solid #ddd;">
-
     <section id="projects">
         <h2>My Projects</h2>
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>My first professional website built with HTML, CSS & JavaScript. Featur
-    <div class="card">
-    <h3>Portfolio Website</h3>
-    <p>My first professional website built with HTML, CSS & JavaScript. Features dark mode, animations, and mobile responsive design. Hosted on GitHub Pages.</p>
-    <a href="#" class="btn">You are here</a>
-</div>
-
-<div class="card">
-    <h3>Restaurant Website</h3>
-    <p>A modern website for a local restaurant. Built with HTML & CSS. Has menu page, contact form, and mobile friendly design.</p>
-    <a href="#" class="btn">Coming Soon</a>
-</div>
-
-<div class="card">
-    <h3>Landing Page for Business</h3>
-    <p>One-page business website with smooth animations and contact section. Designed to help small businesses get customers online.</p>
-    <a href="#" class="btn">Coming Soon</a>
-</div>
-
-    <hr style="margin: 50px 0; border: 1px solid #ddd;">
+        <div class="project-grid">
+            <div class="card">
+                <h3>🍽️ SEFWI TASTE RESTAURANT</h3>
+                <p>Full restaurant website for Sefwi Taste. Features menu, online ordering via WhatsApp, and mobile responsive design. Built to help local businesses get more customers.</p>
+                <a href="https://alhassanmohammad567-lab.github.io/Alhassan-portfolio-/restaurant.html" class="btn btn-restaurant">VISIT RESTAURANT</a>
+            </div>
+            <div class="card">
+                <h3>💼 PORTFOLIO WEBSITE</h3>
+                <p>This website! Professional portfolio with dark mode, animations, and responsive design. Built to showcase my skills and attract clients.</p>
+                <a href="#" class="btn">YOU ARE HERE</a>
+            </div>
+            <div class="card">
+                <h3>🚀 YOUR PROJECT</h3>
+                <p>Ready to build your website? I deliver in 7 days. Affordable pricing. Ongoing support. Let's make your business look professional online.</p>
+                <a href="https://wa.me/233594395513" class="btn">WORK WITH ME</a>
+            </div>
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Let's work together!</p>
         <div class="card">
-            <p style="font-size:18px; margin:5px 0;"><b>Email:</b></p>
+            <p>Let's work together! Send me a message.</p>
             <p style="font-size:20px; color:#006400; font-weight:bold;">alhassanmohammad744@gmail.com</p>
-            <p style="font-size:18px; margin:10px 0;"><b>WhatsApp:</b> +233 59 439 5513</p>
+            <p style="font-size:18px; color:#006400; font-weight:bold;">WhatsApp: +233 59 439 5513</p>
             <a href="https://wa.me/233594395513" class="btn">WhatsApp Me</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Alhassan. Built from Zero to Pro with ❤️</p>
+        <p>© 2026 Alhassan Web Development. Built from Zero to Pro with ❤️</p>
         <p>Sefwi Asawinso, Ghana</p>
     </footer>
 
@@ -263,12 +239,7 @@
 
     btn.addEventListener("click", function() {
         body.classList.toggle("dark-mode");
-        
-        if(body.classList.contains("dark-mode")) {
-            btn.textContent = "☀️ Light Mode";
-        } else {
-            btn.textContent = "🌙 Dark Mode";
-        }
+        btn.textContent = body.classList.contains("dark-mode") ? "☀️ Light" : "🌙 Dark";
     });
 </script>
 </body>
