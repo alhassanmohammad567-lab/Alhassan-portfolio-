@@ -209,7 +209,7 @@ document.getElementById('joinForm').addEventListener('submit', function(e) {
     if(!index.match(/^(00)?50150[0-9]{3}$/)) { alert('❌ Invalid Index Number. Format: 0050150XXX to 1050150XXX'); return; }
 
     let message = `*SOSA 2026 VERIFICATION REQUEST*\n\n*Name:* ${name}\n*Programme:* ${programme}\n*Class:* ${classs}\n*Index No:* ${index}\n*Year:* ${year}\n*WhatsApp:* ${number}\n*Block:* ${block}\n*Location:* ${location}\n*Famous Person:* ${famous}\n*Motto:* ${motto}\n*Patron:* ${patron}\n*Referees:* ${referee}\n\nPlease verify and add me to the group.`;
-    let admins = ['233533468810', '233246060774', '233257023745'];
+    let admins = ['233533468810', '233246060774','233594395513','233257023745'];
     admins.forEach(admin => { window.open(`https://wa.me/${admin}?text=${encodeURIComponent(message)}`, '_blank'); });
     alert('✅ Verification request sent to all Admins! You will be added after approval.');
 });
